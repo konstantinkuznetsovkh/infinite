@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url('../fonts/MyriadPro-Lightt.eot');
+  src: url('../fonts/MyriadPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro-Light.woff') format('woff'),
+    url('../fonts/MyriadPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: url('../fonts/MyriadPro-Regulart.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro-Regular.woff') format('woff'),
+    url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url('../fonts/Ubuntu-Light.eot');
+  src: url('../fonts/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Ubuntu-Light.woff') format('woff'),
+    url('../fonts/Ubuntu-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
