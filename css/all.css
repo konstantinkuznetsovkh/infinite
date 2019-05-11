@@ -669,18 +669,18 @@
      display: block;
  }
 
- header .nav nav ul li.logo a {
+ header .nav nav ul li.logo h1 {
      background: url(../img/logoTop.png) no-repeat center 15px;
      height: 62px;
      width: 65px;
  }
 
- header .nav nav ul li.logo a:hover {
+ header .nav nav ul li.logo h1:hover {
      box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .31);
  }
 
  @media (max-width: 768px) {
-     header .nav nav ul li.logo a:hover {
+     header .nav nav ul li.logo h1:hover {
          transform: rotate(360deg);
          transition: 1s linear;
          transition: 2s ease;
@@ -790,6 +790,7 @@
  @media (min-width: 769px) and (max-width: 1023px) {
      header .nav nav ul li:nth-child(8) {
          margin-left: 40px;
+
      }
  }
 
@@ -799,6 +800,7 @@
          right: -151px;
          top: 0;
          margin-left: 0;
+         display: none;
      }
  }
 
@@ -829,6 +831,7 @@
          margin-right: -200px;
          right: -191px;
          top: 0;
+         display: none;
      }
  }
 
@@ -860,6 +863,7 @@
          margin-right: -200px;
          right: -232px;
          top: 0;
+         display: none;
      }
  }
 
@@ -3700,7 +3704,7 @@
  section.benefits .feedback .layout .slider .sliderItem img {
      width: 139px;
      height: 139px;
-     background: url(../img/imgB.png) no-repeat center;
+     /* background: url(../img/imgB.png) no-repeat center; */
  }
 
  section.benefits .feedback .layout .slider .sliderItem ul li {
