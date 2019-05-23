@@ -8,11 +8,9 @@
   <link rel="stylesheet" href="css/all.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/fontsCustom.css" />
 
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   <!-- <link media="none" onload="if(!media!="all") media="all"" rel="stylesheet" href="https://i.icomoon.io/public/temp/7404a56af2/UntitledProject/style.css"> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css">
@@ -44,8 +42,14 @@
             <form>
               <input type="text" placeholder="Your name">
               <input type="email" placeholder="Email Address">
-              <input type="submit" value="Subscribe »">
+              <input id="button_pop_up_teleport" type="submit" value="Subscribe »">
             </form>
+            <div id="pop_up_teleport">
+              <div class="empty">
+                <p>Спасибо!<br>
+                  Консультант вам перезвонит!</p>
+              </div>
+            </div>
             <p>
               * We don’t share your personal<br>
               info with anyone Check out our <span>Policy</span> & for more information <span>Contact Us</span>.
@@ -557,8 +561,7 @@
                 <div class="video">
                   <iframe src="https://player.vimeo.com/video/77245256" allowfullscreen></iframe>
                   <p><a href="https://vimeo.com/77245256">Customize HTML &amp; CSS3 navigation menus without coding</a>
-                    from <a href="https://vimeo.com/coffeecupsoftware">CoffeeCup Software</a> on <a
-                      href="https://vimeo.com">Vimeo</a>.</p>
+                    from <a href="https://vimeo.com/coffeecupsoftware">CoffeeCup Software</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
                 </div>
                 <div class="text">
                   <h5>Take a sneak peek at our
@@ -575,8 +578,7 @@
               <div class="t2">
                 <div class="video">
                   <iframe src="https://player.vimeo.com/video/63591419" allowfullscreen></iframe>
-                  <p><a href="https://vimeo.com/63591419">Ralph Smitt &quot;Aint Wrong&quot; Music Video</a> from <a
-                      href="https://vimeo.com/user17573104">Ralph Smitt</a> on <a href="https://vimeo.com">Vimeo</a>.
+                  <p><a href="https://vimeo.com/63591419">Ralph Smitt &quot;Aint Wrong&quot; Music Video</a> from <a href="https://vimeo.com/user17573104">Ralph Smitt</a> on <a href="https://vimeo.com">Vimeo</a>.
                   </p>
                 </div>
                 <div class="text">
@@ -593,10 +595,8 @@
               </div>
               <div class="t3">
                 <div class="video">
-                  <iframe src="https://player.vimeo.com/video/164461434?title=0&byline=0&portrait=0"
-                    allowfullscreen></iframe>
-                  <p><a href="https://vimeo.com/164461434">Creative Coding at Kadenze</a> from <a
-                      href="https://vimeo.com/kadenze">KadenzeOfficial</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                  <iframe src="https://player.vimeo.com/video/164461434?title=0&byline=0&portrait=0" allowfullscreen></iframe>
+                  <p><a href="https://vimeo.com/164461434">Creative Coding at Kadenze</a> from <a href="https://vimeo.com/kadenze">KadenzeOfficial</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
                 </div>
                 <div class="text">
                   <h5>Take a sneak peek at our
@@ -855,7 +855,7 @@
               <h3>Subscribe</h3>
               <form>
                 <input type="email" placeholder="Enter your email">
-                <input type="submit" value="">
+                <input id="subscribe" type="submit" value="">
               </form>
               <p>Subscribe to our weekly newsletter, We promise you that we
                 wont spam you. Asperiores totam molestias eaque sunt
@@ -1036,8 +1036,13 @@
                 <input type="email" placeholder="Email" />
                 <input type="text" placeholder="Subject" />
                 <textarea name="name" rows="12" cols="88" placeholder="Your Massege"></textarea>
-                <input type="submit" value="Send Message">
+                <input id="button_pop_up_shift" type="submit" value="Send Message">
               </form>
+              <div id="pop_up_shift">
+                <div>
+                  <p>Спасибо!Мы с вами свяжемся</p>
+                </div>
+              </div>
               <div class="map">
                 This will be replaced with the Google Map.
               </div>

@@ -20,7 +20,54 @@ $(document).ready(function ($) {
 $(document).ready(function () {
   $('.slider').bxSlider();
 });
+document.addEventListener('DOMContentLoaded', () => {
+  //start pop_up_teleport/////////////////////////////////////////////////////////////////////
+(() => {
+  const layout = document.getElementById('pop_up_teleport'),
+    div = layout.getElementsByTagName('div'),
+    button = document.getElementById('button_pop_up_teleport');
+  button.addEventListener('click', () => {
+    layout.style.opacity = '1';
+    layout.style.visibility = 'visible';
+    for (let i = 0; i < div.length; i++) {
+      div[i].style.opacity = '1';
+    }
+    setTimeout(() => {
+      layout.addEventListener('click', () => {
+        layout.style.opacity = '0';
+        layout.style.visibility = 'hidden';
+        for (let i = 0; i < div.length; i++) {
+          div[i].style.opacity = '0';
+        }
+      });
+    }, 888);
+  });
+})();
 
+//start pop_up_shift/////////////////////////////////////////////////////////////////////
+	(() => {
+		const layout = document.getElementById('pop_up_shift'),
+			div = layout.getElementsByTagName('div'),
+			button = document.getElementById('button_pop_up_shift');
+		button.addEventListener('click', () => {
+			layout.style.opacity = '1';
+			layout.style.visibility = 'visible';
+			for (let i = 0; i < div.length; i++) {
+				div[i].style.right = '1vw';
+			}
+			setTimeout(() => {
+				layout.addEventListener('click', () => {
+					layout.style.opacity = '0';
+					layout.style.visibility = 'hidden';
+					for (let i = 0; i < div.length; i++) {
+						div[i].style.right = '-21vw';
+					}
+				});
+			}, 888);
+		});
+	})();
+	//end pop_up_shift///////////////////////////////////////////////////////////////////////
+  });
 // 'use strict';
 function onYouTubePlayerAPIReady() {
   var playerYoutube;
