@@ -212,59 +212,126 @@
 
  header {
      width: 100%;
+     position: relative;
+     height: 769px;
  }
 
- header .bgVideo {
+ header .backgroundVideo {
      background: #7b7b7b7b;
      text-align: center;
      height: 769px;
+     width: 100%;
      color: #fff;
+     position: absolute;
+     z-index: 10;
+     overflow: hidden;
+ }
+
+ header .backgroundVideo video {
+     position: absolute;
+     padding-bottom: 32.7%;
+     height: 150%;
+     /* width: 100%; */
+     top: 0;
+     left: 0;
+     z-index: 5;
+     /* opacity: 0;s */
+ }
+
+ @media (min-width: 2051px) {
+     header .backgroundVideo video {
+         left: 50%;
+         transform: translateX(-50%);
+     }
+
+     /* header .backgroundVideo {
+         overflow: hidden;
+     } */
+ }
+
+ @media (min-width: 3333px) {
+     header .backgroundVideo video {
+         height: 250%;
+         left: 50%;
+         transform: translateX(-50%);
+     }
+ }
+
+ header .backgroundVideo .video-play-btn {
+     background: url(../img/play.png) no-repeat center;
+     border-radius: 50%;
+     /* position: absolute; */
+     margin: 29px auto 0 auto;
+     /* right: calc(50% - 52px); */
+     width: 103px;
+     height: 103px;
+     cursor: pointer;
+     z-index: 7;
+ }
+
+ header .backgroundVideo .video-play-btn#stop-btn {
+     display: none;
+     background: url(../img/stop.png) no-repeat center/209px;
+     border-radius: 50%;
+     /* position: absolute; */
+     margin: 29px auto 0 auto;
+     /* right: calc(50% - 52px); */
+     width: 103px;
+     height: 103px;
+     cursor: pointer;
+     z-index: 7;
+ }
+
+ header .backgroundVideo .video-play-btn:hover {
+     box-shadow: 0 0 44px #000;
  }
 
  @media (min-width: 1024px) and (max-width: 1399px) {
-     header .bgVideo {
-         height: 100%;
+     header .backgroundVideo video {
+         height: 110%;
      }
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo {
+     header .backgroundVideo video {
          height: 100%;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo {
+     header .backgroundVideo video {
          height: 100%;
+         left: -50%;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo {
+     header .backgroundVideo video {
          height: 100%;
+         left: -130%
      }
  }
 
- header .bgVideo .hidden {
+ /* header .backgroundVideo .hidden {
      display: none !important;
- }
+ } */
 
- header .bgVideo .wrapper {
+ /* header .backgroundVideo .wrapper {
      max-width: 560px;
      width: 100%;
      margin-left: auto;
      margin-right: auto;
      margin-top: 100px;
- }
+ } */
 
- header .bgVideo .video-youtube {
+ /* header .backgroundVideo .video-youtube {
      position: absolute;
      padding-bottom: 32.7%;
      height: 15%;
      width: 100%;
- }
+ } */
 
- header .bgVideo .video-youtube.video-youtube_overlay:before {
+ /* header .backgroundVideo .video-youtube.video-youtube_overlay:before {
      content: '';
      position: absolute;
      left: 0;
@@ -276,9 +343,9 @@
      height: 100%;
      display: block;
      z-index: 5;
- }
+ } */
 
- header .bgVideo .video-youtube .video-youtube__content {
+ /* header .backgroundVideo .video-youtube .video-youtube__content {
      position: absolute;
      top: 0;
      left: 0;
@@ -286,22 +353,22 @@
      height: 100%;
  }
 
- header .bgVideo .video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn {
+ header .backgroundVideo .video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn {
      width: 100%;
      height: 100%;
      transform: scale(.01);
      transform-origin: top left;
  }
 
- header .bgVideo .video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::-moz-selection {
+ header .backgroundVideo .video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::-moz-selection {
      background-color: transparent;
  }
 
- header .bgVideo .video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::selection {
+ header .backgroundVideo .video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::selection {
      background-color: transparent;
- }
+ } */
 
- header .bgVideo .video-youtube .video-youtube__new-play-btn {
+ /* header .backgroundVideo .video-youtube .video-youtube__new-play-btn {
      background: url(../img/play.png) no-repeat center;
      border-radius: 50%;
      position: absolute;
@@ -311,20 +378,22 @@
      height: 103px;
      cursor: pointer;
      z-index: 7;
- }
+ } */
 
- header .bgVideo .video-youtube .video-youtube__new-play-btn:hover {
+
+
+ /* header .backgroundVideo .video-youtube .video-youtube__new-play-btn:hover {
      box-shadow: 0 0 44px #000;
- }
+ } */
 
  @media (min-width: 1024px) and (max-width: 1399px) {
-     header .bgVideo .video-youtube .video-youtube__new-play-btn {
+     header .backgroundVideo .video-youtube .video-youtube__new-play-btn {
          top: 43vh;
      }
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo .video-youtube .video-youtube__new-play-btn {
+     header .backgroundVideo .video-youtube .video-youtube__new-play-btn {
          top: 43vh;
          width: 88px;
          height: 88px;
@@ -332,41 +401,41 @@
  }
 
  @media (max-width: 768px) {
-     header .bgVideo .video-youtube .video-youtube__new-play-btn {
+     header .backgroundVideo .video-youtube .video-youtube__new-play-btn {
          top: 43vh;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo .video-youtube .video-youtube__new-play-btn {
+     header .backgroundVideo .video-youtube .video-youtube__new-play-btn {
          top: 43vh;
      }
  }
 
- header .bgVideo .layout {
+ header .backgroundVideo .layout {
      z-index: 6;
      width: 818px;
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo .layout {
+     header .backgroundVideo .layout {
          width: 769px;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo .layout {
+     header .backgroundVideo .layout {
          width: 540px;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo .layout {
+     header .backgroundVideo .layout {
          width: 320px;
      }
  }
 
- header .bgVideo .layout div.headerTop p:first-child {
+ header .backgroundVideo .layout div.headerTop p:first-child {
      padding-top: 109px;
      text-transform: uppercase;
      font-family: Ubuntu, sans-serif;
@@ -377,24 +446,24 @@
  }
 
  @media (min-width: 1024px) and (max-width: 1399px) {
-     header .bgVideo .layout div.headerTop p:first-child {
+     header .backgroundVideo .layout div.headerTop p:first-child {
          padding-top: 88px;
      }
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo .layout div.headerTop p:first-child {
+     header .backgroundVideo .layout div.headerTop p:first-child {
          padding-top: 88px;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo .layout div.headerTop p:first-child {
+     header .backgroundVideo .layout div.headerTop p:first-child {
          padding-top: 44px;
      }
  }
 
- header .bgVideo .layout div.headerTop h3 {
+ header .backgroundVideo .layout div.headerTop h3 {
      padding-top: 31px;
      font-family: MyriadPro-Regular;
      font-size: 56px;
@@ -403,32 +472,32 @@
  }
 
  @media (min-width: 1024px) and (max-width: 1399px) {
-     header .bgVideo .layout div.headerTop h3 {
+     header .backgroundVideo .layout div.headerTop h3 {
          padding-top: 0;
      }
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo .layout div.headerTop h3 {
+     header .backgroundVideo .layout div.headerTop h3 {
          padding-top: 0;
          font-size: 49px;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo .layout div.headerTop h3 {
+     header .backgroundVideo .layout div.headerTop h3 {
          padding-top: 0;
          font-size: 49px;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo .layout div.headerTop h3 {
+     header .backgroundVideo .layout div.headerTop h3 {
          font-size: 33px;
      }
  }
 
- header .bgVideo .layout div.headerTop p:last-child {
+ header .backgroundVideo .layout div.headerTop p:last-child {
      padding-top: 33px;
      font-family: Ubuntu-Light;
      font-size: 24px;
@@ -437,24 +506,24 @@
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo .layout div.headerTop p:last-child {
+     header .backgroundVideo .layout div.headerTop p:last-child {
          padding-top: 11px;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo .layout div.headerTop p:last-child {
+     header .backgroundVideo .layout div.headerTop p:last-child {
          padding-top: 11px;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo .layout div.headerTop p:last-child {
+     header .backgroundVideo .layout div.headerTop p:last-child {
          padding-top: 11px;
      }
  }
 
- header .bgVideo div.headerBottom {
+ header .backgroundVideo div.headerBottom {
      display: -ms-flexbox;
      display: flex;
      -ms-flex-pack: center;
@@ -465,8 +534,8 @@
      align-items: center;
  }
 
- header .bgVideo div.headerBottom form {
-     padding-top: 262px;
+ header .backgroundVideo div.headerBottom form {
+     padding-top: 130px;
      display: -ms-flexbox;
      display: flex;
      width: 600px;
@@ -475,21 +544,21 @@
  }
 
  @media (min-width: 1024px) and (max-width: 1399px) {
-     header .bgVideo div.headerBottom form {
+     header .backgroundVideo div.headerBottom form {
          padding-top: 151px;
          padding-bottom: 17px;
      }
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo div.headerBottom form {
+     header .backgroundVideo div.headerBottom form {
          padding-top: 151px;
          padding-bottom: 17px;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo div.headerBottom form {
+     header .backgroundVideo div.headerBottom form {
          padding-top: 151px;
          padding-bottom: 17px;
          width: 505px;
@@ -497,7 +566,7 @@
  }
 
  @media (max-width: 540px) {
-     header .bgVideo div.headerBottom form {
+     header .backgroundVideo div.headerBottom form {
          -ms-flex-wrap: wrap;
          flex-wrap: wrap;
          padding-top: 151px;
@@ -509,7 +578,7 @@
      }
  }
 
- header .bgVideo div.headerBottom form input[type=text] {
+ header .backgroundVideo div.headerBottom form input[type=text] {
      border: 1px solid #929292;
      width: 182px;
      font-family: Ubuntu-Light;
@@ -518,19 +587,19 @@
  }
 
  @media (max-width: 768px) {
-     header .bgVideo div.headerBottom form input[type=text] {
+     header .backgroundVideo div.headerBottom form input[type=text] {
          width: 141px;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo div.headerBottom form input[type=text] {
+     header .backgroundVideo div.headerBottom form input[type=text] {
          width: 100%;
          height: 44px;
      }
  }
 
- header .bgVideo div.headerBottom form input[type=email] {
+ header .backgroundVideo div.headerBottom form input[type=email] {
      border: 1px solid #929292;
      width: 182px;
      font-family: Ubuntu-Light;
@@ -539,19 +608,19 @@
  }
 
  @media (max-width: 768px) {
-     header .bgVideo div.headerBottom form input[type=email] {
+     header .backgroundVideo div.headerBottom form input[type=email] {
          width: 151px;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo div.headerBottom form input[type=email] {
+     header .backgroundVideo div.headerBottom form input[type=email] {
          width: 100%;
          height: 44px;
      }
  }
 
- header .bgVideo div.headerBottom form input[type=submit] {
+ header .backgroundVideo div.headerBottom form input[type=submit] {
      width: 160px;
      border: 0;
      color: #fff;
@@ -563,19 +632,19 @@
  }
 
  @media (max-width: 768px) {
-     header .bgVideo div.headerBottom form input[type=submit] {
+     header .backgroundVideo div.headerBottom form input[type=submit] {
          width: 140px;
      }
  }
 
  @media (max-width: 540px) {
-     header .bgVideo div.headerBottom form input[type=submit] {
+     header .backgroundVideo div.headerBottom form input[type=submit] {
          width: 80%;
          height: 44px;
      }
  }
 
- header .bgVideo div.headerBottom form input[type=submit]:hover {
+ header .backgroundVideo div.headerBottom form input[type=submit]:hover {
      box-shadow: 0 5px 7px #fff;
  }
 
@@ -640,7 +709,7 @@
      color: rgb(0, 0, 0);
  }
 
- header .bgVideo div.headerBottom p {
+ header .backgroundVideo div.headerBottom p {
      color: #fff;
      width: 600px;
      font-family: Ubuntu, sans-serif;
@@ -651,19 +720,19 @@
  }
 
  @media (min-width: 1024px) and (max-width: 1399px) {
-     header .bgVideo div.headerBottom p {
+     header .backgroundVideo div.headerBottom p {
          padding-bottom: 33px;
      }
  }
 
  @media (min-width: 769px) and (max-width: 1023px) {
-     header .bgVideo div.headerBottom p {
+     header .backgroundVideo div.headerBottom p {
          padding-bottom: 33px;
      }
  }
 
  @media (max-width: 768px) {
-     header .bgVideo div.headerBottom p {
+     header .backgroundVideo div.headerBottom p {
          font-size: 12px;
          padding: 0 10px 33px 0;
          display: inline-block;
@@ -671,7 +740,7 @@
      }
  }
 
- header .bgVideo div.headerBottom p span {
+ header .backgroundVideo div.headerBottom p span {
      color: #19bc9b;
  }
 
@@ -679,6 +748,9 @@
      background: #fff;
      height: 62px;
      box-shadow: 0 4px 15px rgba(0, 0, 0, .19);
+     top: 769px;
+     position: absolute;
+     width: 100%;
  }
 
  header .nav .hiding {
@@ -943,10 +1015,12 @@
 
  header .nav nav ul li:nth-child(10) a:hover {
      box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .31);
+     padding-top: 62px;
  }
 
  .whatWeDo {
      border-bottom: 1px solid #ddd;
+     padding-top: 62px;
  }
 
  .whatWeDo .layout .top {

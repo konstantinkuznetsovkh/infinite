@@ -113,45 +113,71 @@ document.addEventListener('DOMContentLoaded', () => {
   //end pop_up_shift///////////////////////////////////////////////////////////////////////
 });
 // 'use strict';
-function onYouTubePlayerAPIReady() {
-  var playerYoutube;
+// function onYouTubePlayerAPIReady() {
+//   var playerYoutube;
 
-  playerYoutube = new YT.Player("video-youtube__content", {
-    videoId: "qFLhGq0060w",
+//   playerYoutube = new YT.Player("video-youtube__content", {
+//     videoId: "tpQUdo-Su8g",
 
-    playerVars: {
-      // 'controls': 0,
-      // 'showinfo': 0,
-      // 'disablekb': 1
-    },
-    events: {
-      onReady: onYouTubePlayerReady
-    }
-  });
-}
+//     playerVars: {
+//       // 'controls': 0,
+//       // 'showinfo': 0,
+//       // 'disablekb': 1
+//     },
+//     events: {
+//       onReady: onYouTubePlayerReady
+//     }
+//   });
+// }
 
-function onYouTubePlayerReady(event) {
-  // https://developers.google.com/youtube/iframe_api_reference#Events
-  var targetYoutubeVideo = event.target;
-  var videoDomElem = document.getElementById(
-    event.target.getIframe().getAttribute("id")
-  );
-  var newPlayBtn = videoDomElem.nextElementSibling;
+// function onYouTubePlayerReady(event) {
+//   // https://developers.google.com/youtube/iframe_api_reference#Events
+//   var targetYoutubeVideo = event.target;
+//   var videoDomElem = document.getElementById(
+//     event.target.getIframe().getAttribute("id")
+//   );
+//   var newPlayBtn = videoDomElem.nextElementSibling;
 
-  newPlayBtn.addEventListener("click", function (event) {
-    targetYoutubeVideo.playVideo();
-    this.classList.add('hidden');
-    videoDomElem.classList.remove('video-youtube__content_hide-origin-play-btn');
-    videoDomElem.parentNode.classList.remove('video-youtube_overlay');
-  });
-}
+//   newPlayBtn.addEventListener("click", function (event) {
+//     targetYoutubeVideo.playVideo();
+//     this.classList.add('hidden');
+//     videoDomElem.classList.remove('video-youtube__content_hide-origin-play-btn');
+//     videoDomElem.parentNode.classList.remove('video-youtube_overlay');
+//   });
+// }
 
-var tag = document.createElement("script");
+// var tag = document.createElement("script");
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName("script")[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 /* -------------------------------------------------------------------------
    end Video Youtube
  * ------------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  var video = document.getElementsByTagName('video')[0];
+  var btn = document.getElementById('play-btn');
+  var btn_stop = document.getElementById('stop-btn');
+  // btn
+  btn.addEventListener('click', () => {
+    video.play();
+    btn.style.display = "none";
+    btn_stop.style.display = "block";
+  })
+  btn_stop.addEventListener('click', () => {
+    video.pause();
+    btn_stop.style.display = "none";
+    btn.style.display = "block";
+  })
+
+  //зацикливание видео
+  if (typeof video.loop == 'boolean') { // loop supported
+    video.loop = true;
+  } else { // loop property not supported
+    video.on('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
+});
