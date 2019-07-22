@@ -1,0 +1,20 @@
+ 
+ 
+ 
+DOMException не смог выполнить 'setPointerCapture' в 'Element' и 'releasePointerCapture' 
+  jquery.bxslider.js:1109 Uncaught DOMException: Failed to execute 'setPointerCapture' on 'Element': InvalidPointerId
+    at HTMLDivElement.onTouchStart (http://localhost:8100/js/jquery.bxslider.js:1109:34)
+    at HTMLDivElement.dispatch (http://localhost:8100/js/jquery-3.1.1.min.js:3:10315)
+    at HTMLDivElement.q.handle (http://localhost:8100/js/jquery-3.1.1.min.js:3:8342)
+onTouchStart @ jquery.bxslider.js:1109
+dispatch @ jquery-3.1.1.min.js:3
+q.handle @ jquery-3.1.1.min.js:3
+jquery.bxslider.js:1234 Uncaught DOMException: Failed to execute 'releasePointerCapture' on 'Element': InvalidPointerId
+    at HTMLDivElement.onTouchEnd (http://localhost:8100/js/jquery.bxslider.js:1234:32)
+    at HTMLDivElement.dispatch (http://localhost:8100/js/jquery-3.1.1.min.js:3:10315)
+    at HTMLDivElement.q.handle (http://localhost:8100/js/jquery-3.1.1.min.js:3:8342)
+
+тогда: в полном файле jquery.bxslider.js :
+вставляем var chromePointerEvents = typeof PointerEvent === 'function'; if (chromePointerEvents) { if (orig.pointerId === undefined) { return; } }
+1110 line before:
+ touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig];
