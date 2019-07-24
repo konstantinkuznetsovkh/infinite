@@ -3531,7 +3531,7 @@
  }
 
  .selest .layout .cart .item a:hover {
-     transform: rotateZ(22deg);
+     transform: rotateZ(7deg);
  }
 
  .selest .layout .cart .item p.under {
@@ -3662,7 +3662,6 @@
 
  section.getNow .layout .down .item:hover a {
      transform: translateY(-1px);
-     height: 70px;
  }
 
  section.getNow .layout .down .item:nth-child(1) a {
