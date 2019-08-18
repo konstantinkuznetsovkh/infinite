@@ -1705,16 +1705,6 @@
      letter-spacing: 0;
  }
 
- .servicesWeProvide .layout .bottom div:nth-child(1),
- .servicesWeProvide .layout .bottom div:nth-child(4) {
-     /* margin-left: 10px; */
- }
-
- .servicesWeProvide .layout .bottom div:nth-child(3),
- .servicesWeProvide .layout .bottom div:nth-child(6) {
-     /* margin-right: 10px; */
- }
-
  .servicesWeProvide .layout .bottom div:nth-child(1) {
      background: url(../img/swpMT.png) no-repeat center 111px #fff;
  }
