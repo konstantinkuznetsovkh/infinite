@@ -36,6 +36,18 @@ $(document).ready(function () {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  //function for header nav fixed start///////////////
+  // (() => {
+  //   const nav = document.querySelectorAll('nav');
+  //   if (home.getBoundingClientRect().top <= 0 && home.getBoundingClientRect().bottom >= headerProd.clientHeight) {
+  //     remove_li_class();
+  //     add_li_class(0);
+  //     // console.log("home")
+  //   }
+
+  // })();
+  //function for header nav fixed END/////////////////
   (() => {
     var video = document.getElementsByTagName('video')[0];
     var btn = document.getElementById('play-btn');
@@ -83,21 +95,31 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.tabs_v li.t1_v').click();
 
   $('.slider').bxSlider();
-  $('.sliderOurContent').bxSlider();
+  $('.sliderOurContent').bxSlider({
+    controls: false,
+    // randomStart: true,
+    pager: true,
+    pagerSelector: 'links_slider__sliderOurContent',
+    pagerCustom: '.links_slider__sliderOurContent',
+    adaptiveHeight: true,
+    // buildPager: null,
+    captions: false
 
-  $('.tabs li').click(function () {
-    var thisClass = this.className.slice(0, 2);
-    console.log(thisClass)
-    $('div.t1').hide();
-    $('div.t2').hide();
-    $('div.t3').hide();
-    $('div.' + thisClass).fadeIn(500);
-    $('.tabs li').removeClass('active');
-    $(this).addClass('active');
-    return false;
   });
+
+  // $('.tabs li').click(function () {
+  //   var thisClass = this.className.slice(0, 2);
+  //   console.log(thisClass)
+  //   $('div.t1').hide();
+  //   $('div.t2').hide();
+  //   $('div.t3').hide();
+  //   $('div.' + thisClass).fadeIn(500);
+  //   $('.tabs li').removeClass('active');
+  //   $(this).addClass('active');
+  //   return false;
+  // });
   // $('li.t1').addClass('active');
-  $('li.t1').click();
+  // $('li.t1').click();
   //start pop_up_teleport/////////////////////////////////////////////////////////////////////
   (() => {
     const layout = document.getElementById('pop_up_teleport'),
