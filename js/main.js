@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pager: true,
     pagerSelector: 'links_slider__sliderOurContent',
     pagerCustom: '.links_slider__sliderOurContent',
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     // buildPager: null,
     captions: false
 

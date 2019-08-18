@@ -1270,9 +1270,9 @@
       z-index: 9;
  } */
 
- .ourContents .layout .bottom .sliderItem {
+ /* .ourContents .layout .bottom .sliderItem {
      height: 585px;
- }
+ } */
 
  @media (min-width: 769px) and (max-width: 1023px) {
      .ourContents .layout .bottom .sliderItem {
@@ -1314,14 +1314,14 @@
  @media (min-width: 769px) and (max-width: 1023px) {
      .ourContents .layout .links_slider__sliderOurContent {
          right: 47%;
-         top: 2%;
+         top: 5%;
      }
  }
 
  @media (max-width: 768px) {
      .ourContents .layout .links_slider__sliderOurContent {
          right: 45%;
-         top: 2%;
+         top: 5%;
      }
  }
 
@@ -1349,7 +1349,15 @@
 
  @media (min-width: 1024px) and (max-width: 1399px) {
      .ourContents .layout .bottom .img {
-         width: 569px;
+         width: 50%;
+     }
+
+     .ourContents .layout .bottom .right {
+         width: 45%;
+     }
+
+     .ourContents .layout .bottom .links_slider__sliderOurContent {
+         right: 49%;
      }
  }
 
@@ -1365,12 +1373,6 @@
      }
  }
 
- @media (max-width: 540px) {
-     .ourContents .layout .bottom .img {
-         width: 320px;
-     }
- }
-
  .ourContents .layout .bottom .right {
      display: inline-block;
      margin-left: 15px;
@@ -1380,25 +1382,19 @@
      text-align: center;
  }
 
- @media (min-width: 769px) and (max-width: 1023px) {
+ @media (min-width: 1024px) and (max-width: 1399px) {
+
      .ourContents .layout .bottom .right {
-         width: 739px;
-         margin-right: 15px;
-         transform: translateY(0);
+         width: 45%;
      }
+
  }
 
- @media (max-width: 768px) {
-     .ourContents .layout.bottom .right {
-         width: 510px;
-         margin-right: 15px;
-         transform: translateY(0);
-     }
- }
 
- @media (max-width: 540px) {
+ @media (max-width: 1023px) {
      .ourContents .layout .bottom .right {
-         width: 290px;
+         padding-top: 10px;
+         width: calc(100% - 30px);
          margin-right: 15px;
          transform: translateY(0);
      }
@@ -4352,12 +4348,12 @@
      font-family: MyriadPro-Regular;
      font-size: 16px;
      cursor: pointer;
-     transition: .7s linear;
+     transition: .33s linear;
  }
 
  section.footer .top .layout .forma form input[type=submit]:hover {
-     transition: .7s linear;
-     transform: scale(1.1, 1.1);
+     transition: .33s linear;
+     transform: scale(1.01, 1.01);
      margin-left: 12px;
      box-shadow: 0 0 5px #000;
  }
