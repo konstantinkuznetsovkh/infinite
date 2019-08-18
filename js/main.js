@@ -1,17 +1,3 @@
-$(document).ready(function ($) {
-  // $('.tabs_v li').click(function () {
-  //   var thisClass = this.className.slice(0, 4);
-  //   console.log(thisClass)
-  //   $('div.t1_v').hide();
-  //   $('div.t2_v').hide();
-  //   $('div.t3_v').hide();
-  //   $('div.' + thisClass).fadeIn(500);
-  //   $('.tabs_v li').removeClass('active');
-  //   $(this).addClass('active');
-  //   return false;
-  // });
-  // $('.tabs_v li.t1_v').click();
-});
 
 
 
@@ -107,19 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  // $('.tabs li').click(function () {
-  //   var thisClass = this.className.slice(0, 2);
-  //   console.log(thisClass)
-  //   $('div.t1').hide();
-  //   $('div.t2').hide();
-  //   $('div.t3').hide();
-  //   $('div.' + thisClass).fadeIn(500);
-  //   $('.tabs li').removeClass('active');
-  //   $(this).addClass('active');
-  //   return false;
-  // });
-  // $('li.t1').addClass('active');
-  // $('li.t1').click();
   //start pop_up_teleport/////////////////////////////////////////////////////////////////////
   (() => {
     const layout = document.getElementById('pop_up_teleport'),
