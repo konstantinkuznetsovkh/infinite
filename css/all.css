@@ -228,13 +228,14 @@
  }
 
  header .img_after_video_header {
-
+     /* ставим картинку или просто блок чтоб если слабый инет небыло черного экрана а то что мы хотим */
      background: #a9a9a9;
      height: 100%;
      width: 100%;
      position: absolute;
      z-index: 6;
-
+     opacity: 1;
+     transition: 1s opacity;
  }
 
  header .backgroundVideo video {

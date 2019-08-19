@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video.play();
       btn.style.display = "none";
       btn_stop.style.display = "block";
-      div_after.style.display = "none";
+      div_after.style.opacity = "0"; //убираем картинку для слабого инета
     })
     btn_stop.addEventListener('click', () => {
       video.pause();
