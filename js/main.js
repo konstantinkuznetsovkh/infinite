@@ -38,11 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     var video = document.getElementsByTagName('video')[0];
     var btn = document.getElementById('play-btn');
     var btn_stop = document.getElementById('stop-btn');
+    var div_after = document.getElementsByClassName('img_after_video_header')[0];
     // btn
     btn.addEventListener('click', () => {
       video.play();
       btn.style.display = "none";
       btn_stop.style.display = "block";
+      div_after.style.display = "none";
     })
     btn_stop.addEventListener('click', () => {
       video.pause();

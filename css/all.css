@@ -227,6 +227,16 @@
      overflow: hidden;
  }
 
+ header .img_after_video_header {
+
+     background: #a9a9a9;
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     z-index: 6;
+
+ }
+
  header .backgroundVideo video {
      position: absolute;
      padding-bottom: 32.7%;
@@ -860,15 +870,12 @@
      }
 
      header .nav nav ul:first-child:hover li {
-         /* display: block; */
          width: 167%;
          left: 0;
      }
 
      header .nav nav ul:first-child:hover li.logo {
-         /* display: block; */
          width: 100%;
-         /* left: 0; */
      }
 
  }
@@ -876,45 +883,15 @@
  header .nav nav ul li a {
      display: inline-block;
      color: #a69999;
-     /* background: rgba(0, 0, 0, .08); */
  }
 
  header .nav nav ul.soc li:nth-child(1) {
-     /* margin-left: 425px; */
      border-left: 1px solid #f3f3f3;
      height: 58px;
      width: 46px;
-     /* padding-left: 0; */
+
  }
 
- @media (min-width: 1024px) and (max-width: 1399px) {
-     /* header .nav nav ul.soc li:nth-child(1) {
-         margin-left: 295px;
-     } */
- }
-
- @media (min-width: 769px) and (max-width: 1023px) {
-     /* header .nav nav ul.soc li:nth-child(1) {
-         margin-left: 40px;
-
-     } */
- }
-
- @media (max-width: 768px) {
-     /* header .nav nav ul.soc li:nth-child(1) {
-         margin-right: -200px;
-         right: -151px;
-         top: 0;
-         margin-left: 0;
-         display: none;
-     } */
- }
-
- @media (max-width: 540px) {
-     /* header .nav nav ul.soc li:nth-child(1) {
-         margin-right: 0;
-     } */
- }
 
  header .nav nav ul.soc li:nth-child(1) a {
      background: url(../img/facebook.png) no-repeat center;
@@ -932,22 +909,6 @@
      padding-left: 0;
  }
 
- @media (max-width: 768px) {
-     /* header .nav nav ul.soc li:nth-child(2) {
-         margin-right: -200px;
-         right: -191px;
-         top: 0;
-         /* display: none; */
- }
-
-
-
- @media (max-width: 540px) {
-     /* header .nav nav ul.soc li:nth-child(2) {
-         margin-right: 0;
-     } */
- }
-
  header .nav nav ul.soc li:nth-child(2) a {
      background: url(../img/twetter.png) no-repeat center;
      width: 100%;
@@ -963,21 +924,6 @@
      height: 58px;
      width: 46px;
      padding-left: 0;
- }
-
- @media (max-width: 768px) {
-     /* header .nav nav ul.soc li:nth-child(3) {
-         margin-right: -200px;
-         right: -232px;
-         top: 0;
-         display: none;
-     } */
- }
-
- @media (max-width: 540px) {
-     /* header .nav nav ul.soc li:nth-child(3) {
-         margin-right: 0;
-     } */
  }
 
  header .nav nav ul.soc li:nth-child(3) a {
