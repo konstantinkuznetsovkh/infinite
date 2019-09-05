@@ -229,7 +229,7 @@
 
  header .img_after_video_header {
      /* ставим картинку или просто блок чтоб если слабый инет небыло черного экрана а то что мы хотим */
-     background: #a9a9a9;
+     background: rgba(169, 169, 169, .7);
      height: 100%;
      width: 100%;
      position: absolute;
@@ -738,6 +738,7 @@
 
  header .nav nav ul li.logo {
      display: block;
+     cursor: pointer;
  }
 
  header .nav nav ul li.logo h1 {
@@ -753,7 +754,10 @@
  }
 
  @media (max-width: 768px) {
+
+
      header .nav nav ul li.logo h1:hover {
+
          transform: rotate(360deg);
          transition: .5s linear;
          transition: 1s ease;

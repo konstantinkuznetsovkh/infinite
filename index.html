@@ -59,7 +59,6 @@
             <ul>
               <li class="logo">
                 <h1>
-
                 </h1>
               </li>
               <li>
@@ -925,10 +924,9 @@
           <div class="second">
             <div class="layout">
               <div class="left">
-                <a href="#header"></a>
+                <a href="#header" class="anchor"></a>
                 <p>&copy; 2016 Infinite
                   Designed by
-
                   <span>Naveen</span>
                 </p>
               </div>
@@ -949,6 +947,27 @@
       </section>
 
     </footer>
+    <span id="up"></span>
+    <style>
+      #up {
+        width: 50px;
+        height: 50px;
+        color: black;
+        background: url('img/up1.png');
+        opacity: 0;
+        position: fixed;
+        left: 2%;
+        transition: 3s;
+        bottom: -200px;
+        z-index: 11;
+        cursor: pointer;
+      }
+
+      #up:hover {
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        transition: .5s;
+      }
+    </style>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>

@@ -142,3 +142,148 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
   //end pop_up_shift///////////////////////////////////////////////////////////////////////
 });
+(() => {
+  //start function for line menu////////////
+  window.addEventListener('scroll', nav_fixed);
+  nav_fixed();
+  function nav_fixed() {
+    // up_btn();
+    // window.addEventListener('resize', () => {
+    //   let h_h = h.clientHeight;
+    // });
+    let header = document.querySelector("header .nav");
+    let h = document.getElementsByTagName('header')[0];
+    // var h_h = h.clientHeight;
+    // // var coords = header.getBoundingClientHeight();
+    // var windowHeight = document.documentElement.clientHeight;
+    // let height_screen = document.documentElement.clientHeight;
+    if (header.getBoundingClientRect().top <= 0) {
+      header.style.position = "fixed";
+      header.style.top = "0";
+      header.style.zIndex = "10";
+    }
+    if (h.getBoundingClientRect().bottom >= 0) {
+      header.style.position = "absolute";
+      header.style.top = "769px";
+      header.style.zIndex = "inherit";
+    }
+
+  }
+  //end function for line menu////////////// 
+  /////start click nav logo scroll top/////////
+  // window.addEventListener('resize', () => {
+  //   // if (document.documentElement.clientWidth >= 768) {
+  //   logo();
+  //   console.log(document.documentElement.clientWidth)
+  // })
+  // else {
+  //   logo.stopEventPropagation;
+  // }
+  // })
+  // function logo() {
+  //   let logo = document.querySelector('header nav .logo');
+  //   if (document.documentElement.clientWidth >= 768) {
+  //     logo.addEventListener('click', function () {
+  //       // document.body.scrollTop = document.documentElement.scrollTop = 0;      
+  //       $('html,body').animate({
+  //         scrollTop: 0
+  //       }, 2222);
+  //       return false;
+  //       // $('body').scrollTop(0);//jquery     
+  //     })
+  //   }
+  //   else {
+  //     logo.addEventListener('click', logo, true)
+  //   }
+  // } logo();
+  // if (document.scrollTop < 1111) {
+  // Кнопка «Наверх/Вниз»
+  // var lastScrollPosition = 0;
+
+  // var up = document.getElementById('up');
+  $('#up').click(function () {
+    // if ($(document).scrollTop() > 555) {
+    $('html,body').animate({
+      scrollTop: 0
+    }, 2222);
+    return false;
+    // }
+  });
+
+  $(document).scroll(function () {
+    if ($(document).scrollTop() > 555) {
+      $('#up').fadeIn();
+      $('#up').css('bottom', "10%")
+      $('#up').css('opacity', "1")
+      $('#up').css('transform', "rotate(0deg)")
+      // $('#up').text('Наверх');
+    } else {
+      $('#up').fadeIn();
+      $('#up').css('bottom', "-200px")
+      $('#up').css('opacity', "0")
+      $('#up').css('transform', "rotate(180deg)")
+    }
+  });
+  // var up = document.getElementById('up');
+
+  // function up_btn() {
+  //   var html = document.documentElement;
+  //   var body = document.body;
+  //   var scrollTop = html.scrollTop || body && body.scrollTop || 0;
+  //   scrollTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
+  //   console.log(scrollTop);
+  //   if (scrollTop > 2222) {
+  //     up.style.display = "block";
+  //     up.addEventListener('click', () => {
+  //       // window.scrollTo(0, 0);
+  //       $('html,body').animate({
+  //         scrollTop: 0
+  //       }, 2222);
+  //       return false;
+
+  //     })
+  //   }
+  //   else {
+  //     // up.style.display = "none";
+  //     console.log(scrollTop)
+  //   }
+
+
+  // }; up_btn();
+
+  // alert("Текущая прокрутка: " + scrollTop);
+
+  // }
+  // if (document.documentElement.clientWidth >= 768) {
+  //   let logo = document.querySelector('header nav .logo');
+
+  //   var stepTime = 20;
+  //   var docBody = document.body;
+  //   var focElem = document.documentElement;
+
+  //   var scrollAnimationStep = function (initPos, stepAmount) {
+  //     var newPos = initPos - stepAmount > 0 ? initPos - stepAmount : 0;
+
+  //     docBody.scrollTop = focElem.scrollTop = newPos;
+
+  //     newPos && setTimeout(function () {
+  //       scrollAnimationStep(newPos, stepAmount);
+  //     }, stepTime);
+  //   }
+
+  //   var scrollTopAnimated = function (speed) {
+  //     var topOffset = docBody.scrollTop || focElem.scrollTop;
+  //     var stepAmount = topOffset;
+
+  //     speed && (stepAmount = (topOffset * stepTime) / speed);
+
+  //     scrollAnimationStep(topOffset, stepAmount);
+  //   };
+  //   logo.addEventListener('click', scrollTopAnimated(3000))
+  // }  // И затем:
+
+  // <button onclick="scrollTopAnimated(1000)">Scroll Top</button>
+
+  /////end click nav logo scroll top/////////
+
+})();
